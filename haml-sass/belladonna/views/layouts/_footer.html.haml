@@ -1,0 +1,10 @@
+#footer
+  %span
+    +380-66-3256086
+    %br
+    = link_to 'entrance@belladonna-mill.com', 'mailto:entrance@belladonna-mill.com'
+
+  = link_to t('main.view_site_in_other_language'), set_locale_path(locale: swap_locale) + '#bottom', class: "view-link", method: :post, id: 'bottom'
+  .developers
+    = t('main.designed_by').html_safe
+    = link_to t('main.designer'), 'http://marat.tyncherov.com'

@@ -1,0 +1,31 @@
+= render 'intro'
+
+- @categories.each do |category|
+
+  .row.category
+    %h2.title-soap
+      %span
+        %a.anchor-link{id: category.title_en.parameterize }
+
+        %label= category.title
+
+    .span11
+      - category.products.public.in_order.to_a.in_columns(2) do |column|
+        - unless column.nil?
+          .span5
+            - column.each do |product|
+              = render 'product', product: product
+
+
+#cart-placeholder
+  = render 'shared/cart_items', items: @cart_items
+
+#subscribe{style: ('display: none;' if @cart_items.any?) }
+  = render 'shared/subscribe_form'
+
+= link_to ('<small>&uarr;</small> '+ t('main.top_link')) .html_safe, "#top", id: "top-link"
+
+:javascript
+  $(function(){
+    var cart = new Cart;
+  })

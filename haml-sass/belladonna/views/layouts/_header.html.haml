@@ -1,0 +1,10 @@
+#header
+  %span.logo
+
+  %h1= "~#{t('main.title')}~"
+
+  %ul#nav
+    - @categories.each do |category|
+      %li= link_to category.title, '#'+ category.title_en.parameterize
+
+    %li= link_to t('main.cart'), '#cart', id: 'cart-link', class: ('strike' unless cart_items.any?)

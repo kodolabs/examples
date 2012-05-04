@@ -1,0 +1,25 @@
+.product{id: "product_#{product.id}"}
+  %h3= product.title_without_striped_tags.html_safe
+  .thumb
+    %span.photo
+      = image_tag product.main_image.medium
+      = link_to product.popup_image.medium.url, class: 'left fancybox' do
+        = raw(t('main.expand_view'))
+      = link_to '#', class: 'right' do
+        = raw(t('main.put_to_cart'))
+
+  .add2cart
+    = form_tag '#', 'data-product-id' => product.id do
+      %label= raw(t('main.choose_volume'))
+      .inputs
+        -#%input.input-l{type: "text", value: "", name: "volume" }
+        -#%input._input-r{type: "text", value: "1", name: 'quantity' }
+        = select_tag :variety, options_for_select(product.varieties.map{|e| [ "#{e.title} • #{number_to_currency(e.price)}", e.id]}), class: '_input-l variety', id: "variety_#{product.id}"
+        = select_tag :quantity, options_for_select(1..13), class: 'quantity', id: "quantity_#{product.id}"
+      %a.close{ :href => "#" }  
+      %input{:type => "submit", :value => t('main.put_to_cart_button'), id: "put_to_cart_#{product.id}"}
+
+  .description= raw product.description_without_striped_tags
+  .ingridients
+    %h4= "#{t('main.ingredients')}:"
+    = raw product.ingredients_without_striped_tags

@@ -1,0 +1,34 @@
+!!!
+%html
+  %head
+    %title Belladonna Admin
+    = stylesheet_link_tag    "admin/admin", :media => "all"
+    = javascript_include_tag "admin/admin"
+    = csrf_meta_tags
+
+  %body
+
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar{'data-toggle'=>"collapse", 'data-target'=>".nav-collapse"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+
+          %a.brand Belladonna
+          .nav-collapse
+            - if logged_in?
+              %ul.nav
+                /.active
+                %li= link_to 'Categories', admin_categories_path
+                %li= link_to 'Products', admin_products_path
+                %li= link_to 'Title', admin_pages_path
+                %li= link_to 'Subscribers', admin_subscribers_path
+
+              %ul.nav.pull-right
+                %li= link_to 'View Site', '/', target: :blank
+                %li= link_to 'Logout', logout_path
+
+    .container
+      = yield

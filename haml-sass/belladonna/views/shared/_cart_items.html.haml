@@ -1,0 +1,29 @@
+- if items.any?
+  .row.cart
+    .span10
+      %a{name: 'cart'}
+      %h2
+        %span
+          %label= t('main.cart')
+      %ul
+        - items.each do |item|
+          %li.item{ 'data-item-id' => item.id }
+            .name
+              %label= item.product.title
+              %span &nbsp;
+            .weight
+              %label= item.variety
+              %span &nbsp;              
+            .number
+              %label= item.quantity
+              %span &nbsp;              
+            .price
+              %label= number_to_currency(item.cost)
+            = link_to 'remove from cart', '#', class: 'remove', title: 'Remove from cart'
+
+    = form_for Order.new, remote: true do |f|
+      %label= "#{t('main.email_for_checkout')}:"
+      %input{:type => "text", :value => "", name: 'email'}/
+      %input{:type => "submit", :value => t('main.submit')}/
+
+    .span10.callback
