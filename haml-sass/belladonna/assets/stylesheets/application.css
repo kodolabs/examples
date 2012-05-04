@@ -1,0 +1,472 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require fancybox
+ *= require_directory .
+*/
+
+@font-face {
+  font-family: 'arnopro-caption';
+  src: url('arnopro-caption-webfont.eot');
+  src: url('arnopro-caption-webfont.eot?#iefix') format('embedded-opentype'),
+       url('arnopro-caption-webfont.woff') format('woff'),
+       url('arnopro-caption-webfont.ttf') format('truetype'),
+       url('arnopro-caption-webfont.svg#PalatinoRoman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'arnopro-caption-title';
+  src: url('arnopro-SC-caption-webfont.eot');
+  src: url('arnopro-SC-caption-webfont.eot?#iefix') format('embedded-opentype'),
+       url('arnopro-SC-caption-webfont.woff') format('woff'),
+       url('arnopro-SC-caption-webfont.ttf') format('truetype'),
+       url('arnopro-SC-caption-webfont.svg#PalatinoRoman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'arnopro-smbdcaption';
+  src: url('arnopro-smbdcaption-webfont.eot');
+  src: url('arnopro-smbdcaption-webfont.eot?#iefix') format('embedded-opentype'),
+       url('arnopro-smbdcaption-webfont.woff') format('woff'),
+       url('arnopro-smbdcaption-webfont.ttf') format('truetype'),
+       url('arnopro-smbdcaption-webfont.svg#PalatinoRoman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'arnopro-italiccaption';
+  src: url('arnopro-italiccaption-webfont.eot');
+  src: url('arnopro-italiccaption-webfont.eot?#iefix') format('embedded-opentype'),
+      url('arnopro-italiccaption-webfont.woff') format('woff'),
+       url('arnopro-italiccaption-webfont.ttf') format('truetype'),
+       url('arnopro-italiccaption-webfont.svg#PalatinoRoman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.product .add2cart form,
+#footer span,
+.error-msg,
+.developers {
+  display: block;
+}
+
+.product .thumb a,
+.product .add2cart form label,
+.product .add2cart form .input-l,
+.product .add2cart form .input-r,
+.cart ul li label,
+form label {
+  font-size: 18px;
+}
+
+#top-link,
+ul#nav li a {
+  font-size: 26px;
+}
+
+.product .thumb a,
+.cart ul li .remove,
+h2 span .anchor-link,
+.product .add2cart form .close {
+  position: absolute;
+}
+
+.logo,
+form label,
+form input[type="text"],
+form input[type="submit"],
+.cart ul li span,
+ul#nav,
+.product .thumb span,
+.error-page #footer,
+h1,
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+  display:-moz-inline-stack;
+  display:inline-block;
+  zoom:1;
+  *display:inline;
+  _overflow:hidden;
+}
+
+.product,
+.product .description,
+.product .thumb,
+.product .add2cart form .inputs,
+form {
+  width: 100%;
+}
+
+.product .description,
+form {
+  overflow: hidden;
+}
+
+.photo-left,
+.product .add2cart form .input-l,
+.product .add2cart form .input-r,
+.cart ul li div {
+  float: left;
+}
+
+.photo-right,
+ {
+  float: right;
+}
+
+.product .thumb a.left,
+.cart ul li .weight,
+.cart ul li .number,
+.cart ul li .price {
+  text-align: right;
+}
+
+.error-page,
+#header {
+  text-align: center;
+}
+
+ul#nav,
+.cart ul {
+  list-style: none;
+}
+
+div,
+ul li,
+.product .thumb span,
+.product .add2cart form .inputs,
+h2 span,
+.product .add2cart form {
+  position: relative;
+}
+
+.product .thumb a,
+.product .thumb a:hover,
+ul#nav li a,
+#footer span a,
+#footer span a:hover {
+  text-decoration: none;
+}
+
+#header {
+  padding-top: 60px;
+  font-family: 'arnopro-smbdcaption';
+}
+
+.logo {
+  margin-bottom: 60px;
+  width: 138px;
+  height: 160px;
+  background: url("logo.png") no-repeat;
+}
+
+ul#nav {
+  margin: 0;
+  background: url("separate-nav.png") no-repeat center top;
+  width: 500px;
+  padding-top: 11px;
+  padding-bottom: 60px;
+}
+
+ul#nav li {
+  display: inline;
+  padding: 0 12px;
+}
+
+ul#nav li:first-child {
+  padding-left: 0;
+}
+
+ul#nav li:last-child {
+  padding-right: 0;
+}
+
+h1, h2,
+ul#nav li a,
+ul#nav li a:hover,
+a#top-link
+{
+  letter-spacing: 0.09em;
+}
+
+.ingridients h4 {
+  letter-spacing: 0.12em
+}
+
+.photo-right {
+  margin: 0 0 16px 16px;
+}
+
+.photo-left {
+  margin: 0 16px 16px 0;
+}
+
+.product {
+  background: url("separate-product.png") no-repeat center bottom;
+  padding-bottom: 12px;
+  margin-bottom: 60px;
+}
+
+.product:last-child {
+  margin: 0;
+}
+
+.product .description {
+  font-size: 14px;
+  line-height: 1.6em;
+  margin-bottom: 13px;
+}
+
+.product .thumb {
+  margin-bottom: 18px;
+}
+
+.product .thumb span:hover a {
+  display: block;
+}
+
+.product .thumb a {
+  top: 50%;
+  height: 36px;
+  margin-top: -18px;
+  line-height: 1.1em;
+  display: none;
+  white-space: nowrap;
+  cursor: pointer;
+  width: 110px;
+}
+
+.product .thumb a.left {
+  left: -132px;
+  padding-right: 40px;
+  background: url("icon-expand.png") no-repeat right center;
+}
+
+.product .thumb a.right {
+  right: -132px;
+  text-align: left;
+  padding-left: 40px;
+  background: url("icon-cart.png") no-repeat left center;
+}
+
+.product .add2cart {
+    display: none;
+}
+
+.product .add2cart form {
+  padding: 35px 0 0;
+  margin-bottom: 26px;
+}
+
+.product .add2cart form label {
+  margin-bottom: 15px;
+}
+
+.product .add2cart form .inputs {
+  height: 28px;
+  padding-bottom: 1px;
+  margin-bottom: 10px;
+}
+
+.product .add2cart form .input-l,
+.product .add2cart form .input-r {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product .add2cart form .input-l {
+  background: url("bg-input-l.png") no-repeat left bottom;
+  width: 67px;
+  margin-left: 142px;
+}
+
+.product .add2cart form .input-r {
+  background: url("bg-input-r.png") no-repeat left bottom;
+  width: 57px;
+  margin-left: 28px;
+}
+
+.cart {
+  margin-bottom: 95px;
+}
+
+.cart ul {
+  margin: 0 0 93px;
+}
+
+.cart ul li {
+  margin: 0 0 12px 27px;
+  width: 913px;
+  height: 18px;
+}
+
+.cart ul li div {
+  white-space: nowrap;
+}
+
+.cart ul li span {
+  background: url("points.png") repeat-x left 11px;
+  width: 100%;
+}
+
+.cart ul li .remove,
+.product .add2cart form .close {
+  width: 8px;
+  height: 8px;
+  background: url("icon-close.png") no-repeat;
+}
+
+.cart ul li .remove {
+  left: -25px;
+  top: 6px;
+}
+
+.product .add2cart form .close {
+  top: 20px;
+  right: 40px;
+}
+
+.cart ul li label {
+  padding: 0 3px;
+}
+
+.cart ul li .name,
+.cart ul li .weight,
+.cart ul li .number,
+.cart ul li .price {
+  overflow: hidden;
+}
+
+.cart ul li .name {
+  width: 604px;
+}
+
+.cart ul li .weight {
+  width: 78px;
+  letter-spacing: 0.06em;
+}
+
+.cart ul li .number {
+  width: 160px;
+}
+
+.cart ul li .price {
+  width: 70px;
+}
+
+form {
+  margin: 0 auto;
+}
+
+form input[type="text"] {
+  background: url("separate-title-cart.png") repeat-x 0 100%;
+  width: 260px;
+  height: 20px;
+  margin: 3px 8px 0;
+  padding-bottom: 3px;
+}
+
+form input[type="submit"] {
+  margin: -2px 0 0 0;
+}
+
+#footer {
+  background: url("separate-footer.png") no-repeat;
+  padding: 14px 0 60px;
+}
+
+#footer span {
+  margin-bottom: 50px;
+  line-height: 1.3em;
+  background: url("icon-footer-address.png") no-repeat center top;
+  padding-top: 20px;
+}
+
+#fancybox-overlay {
+  background-color: #dad2b5 !important;
+  opacity: 0.8;
+}
+
+#fancybox-outer {
+  background: none !important;
+}
+
+#fancybox-wrap {
+  padding: 0 !important;
+}
+
+#fancybox-content {
+  border: none !important;
+}
+
+.fancybox-bg {
+  display: none !important;
+}
+
+#fancybox-close {
+  right: 0 !important;
+}
+
+#top-link  {
+  display: none;
+  position: fixed;
+  right: 60px;
+  top: 60px;
+  text-decoration:none;
+  color: #333;
+}
+
+#top-link small {
+  font-size: 67%;
+}
+
+#subscribe {
+  margin-bottom: 100px;
+  min-height: 50px;
+  text-align: center;
+}
+
+.error-page .logo {
+  margin-bottom: 70px;
+}
+
+.error-page #footer {
+  width: 440px;
+}
+
+.error-msg {
+  padding: 28px 0 50px;
+}
+
+.developers {
+  padding-top: 50px;
+  font-size: 15px;
+}
+
+.developers a,
+.intro a {
+  font-style: italic;
+}
+
+.strike {
+  text-decoration: line-through !important;
+}
+
+#subscribe em {
+  font-family: 'arnopro-italiccaption', serif;
+  font-style: normal;
+}

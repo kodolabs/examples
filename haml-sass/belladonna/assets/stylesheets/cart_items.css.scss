@@ -1,0 +1,35 @@
+// Place all the styles related to the cart_items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cart {
+  text-align: center;
+
+  li {
+    a.remove {
+      text-indent: -9999px;
+    }
+  }
+}
+
+.callback {
+  display: none;
+
+  p, em {
+    margin-top: 25px;
+    font-family: 'arnopro-italiccaption';
+    text-align: center;
+    font-weight: normal;
+    line-height: 18px;
+    font-size: 18px;
+    font-style: normal;
+  }
+
+  &.errors {
+    color: red;
+  }
+
+  h3 {
+    margin: 25px 0 0 0;
+  }
+}
