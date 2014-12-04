@@ -1,0 +1,57 @@
+<h1><%= title %></h1>
+<form action="#">
+
+  <div class="form-errors"></div>
+
+  <div class="group">
+    <div>
+      <label for="first_name">First name</label>
+      <input type="text" name="student_first_name" class="student_first_name" id="first_name">
+    </div>
+
+    <div>
+      <label for="last_name">Last name</label>
+      <input type="text" name="student_last_name" id="last_name">
+    </div>
+
+    <div class="dob">
+      <label for="dob">D.O.B</label>
+      <input type="text" id="dob" name="dob">
+    </div><!-- /.dob -->
+  </div><!-- /.group -->
+
+  <div class="group">
+    <div class="parents_selector">
+      <label for="parent_ids">Parents</label>
+      <select class="tags" data-placeholder="Select parents" multiple id="parent_ids"></select>
+    </div>
+  </div>
+
+  <div class="group">
+    <div>
+      <label for="id_number">ID number</label>
+      <input type="text" name="student_id_number" id="id_number">
+    </div>
+
+    <div>
+      <label for="klass_id">Class</label>
+      <select class="tags" data-placeholder="Select class" id="klass_id"></select>
+    </div>
+  </div>
+
+  <div class="group">
+    <div>
+      <label for="avatar">Picture</label>
+      <input id='fileupload' name='avatar' type='file'>
+    </div>
+  </div>
+
+
+  <div class="group actions">
+    <button type="submit" class="save">Save</button>
+    <button type="submit" class="save_another">Save + Add new</button>
+    <a href="#" class="close">Cancel</a>
+    <button type="submit" class="delete"><i class="fa fa-times"></i> Delete student</button>
+  </div>
+
+</form>

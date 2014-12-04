@@ -1,0 +1,21 @@
+<nav>
+  <ul class="tab-links">
+    <li><a href="#details">Details</a></li>
+    <li><a href="#outcomes">Outcomes</a></li>
+    <li><a href="#privacy">Privacy</a></li>
+  </ul>
+</nav>
+
+<div class="tab-content">
+  <%= JST['backbone/templates/gallery/details']() %>
+  <%= JST['backbone/templates/gallery/outcomes']() %>
+  <%= JST['backbone/templates/gallery/privacy']() %>
+</div>
+
+<div id="publish-bar">
+  <div class="options">
+    <button type="button" class="publish js-publish">Uploading</button>
+    <button type="button" class="preview">Cancel</button>
+  </div>
+  <p><input type="checkbox" name="auto-publish" value="#" class="auto-publish" selected>Auto publish once uploads are complete</p>
+</div>

@@ -1,0 +1,36 @@
+<h1><%= title %> <a href="#" class="close"><i class="fa fa-times"></i></a></h1>
+
+<form action="#">
+
+  <div class="form-errors"></div>
+
+  <div class="group">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" name="klass_name" id="name">
+    </div>
+
+    <div>
+      <label for="location">Location</label>
+      <input type="text" name="klass_location" id="location">
+    </div>
+
+    <div>
+      <label for="year">Year</label>
+      <input type="text" name="klass_year" id="year">
+    </div>
+  </div><!-- /.group -->
+
+  <div class="group">
+    <div class="parents_selector">
+      <label for="admin_ids">Teachers</label>
+      <select class="tags" data-placeholder="Select teachers" multiple id="admin_ids"></select>
+    </div>
+  </div>
+
+  <div class="group actions">
+    <button type="submit" class="save">Save</button>
+    <a href="#" class="button delete"><i class="fa fa-times"></i> <strong>Delete</strong> class</a>
+  </div>
+
+</form>
