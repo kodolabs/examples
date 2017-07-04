@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require File.expand_path('../../config/environment', __FILE__)
+require 'rubygems'
+
+$redis = Redis.new(timeout: 0)
+
+puts " --- Started pubsub daemon #{Time.now} ---"
+
+$redis.subscribe('rg_articles') do |on|
+  on.message do |_channel, msg|
+    msg_for_log = msg.dup
+    msg_for_log.delete('content')
+    puts "#{Time.now}: received #{msg_for_log.inspect}"
+    ImporterWorker.perform_async(msg)
+  end
+end
